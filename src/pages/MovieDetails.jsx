@@ -8,9 +8,6 @@ const MovieDetails = () => {
     const API_KEY = '4eb4e6539dc3b8035d2876c8ff1613bb';
     const BASE_URL = 'https://api.themoviedb.org/3';
     
-    const location = useLocation();
-    const backLinkLocation = location.state?.from || '/movies';
-    
     const [movie, setMovie] = useState(null);
 
     useEffect(() => {
