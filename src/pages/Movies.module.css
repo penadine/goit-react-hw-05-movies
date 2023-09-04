@@ -1,0 +1,10 @@
+.container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.searchBar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}

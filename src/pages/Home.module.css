@@ -1,0 +1,16 @@
+.movieItem {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.movieImage {
+width: 112.5px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.movieTitle {
+    font-size: 2rem;
+}

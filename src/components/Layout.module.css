@@ -1,0 +1,30 @@
+div {
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+}
+
+.sectionUnderline {
+  border-bottom: 3px solid black;
+  padding-bottom: 30px;
+  list-style-type: none;
+}
+
+.menu {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navLinkHover,
+.navLinkActive {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}

@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+
+.castContent {
+  display: flex;
+  margin-top: 20px;
+  border-top: 3px solid black;
+  padding-top: 30px;
+}
+
+.title {
+  text-align: center;
+}
+
+.actor img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.actorName {
+  color: #007bff;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.character {
+  color: #6c757d;
+}

@@ -1,0 +1,6 @@
+.reviewsContent {
+    display: flex;
+    margin-top: 20px;
+    border-top: 3px solid black;
+    padding-top: 30px;
+}
