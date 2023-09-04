@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { useLocation, Link, Outlet, useParams } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './MovieDetails.module.css';
 
