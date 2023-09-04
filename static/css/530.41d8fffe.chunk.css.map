@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/530.41d8fffe.chunk.css","mappings":"AAAA,yBACE,4BAAgC,CAChC,YACF,CAEA,yBACE,YAAa,CACb,QAAS,CACT,kBACF","sources":["pages/Movies.module.css"],"sourcesContent":[".container {\n  font-family: 'Arial', sans-serif;\n  padding: 20px;\n}\n\n.searchBar {\n  display: flex;\n  gap: 10px;\n  margin-bottom: 20px;\n}\n"],"names":[],"sourceRoot":""}
