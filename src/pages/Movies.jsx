@@ -8,12 +8,19 @@ const Movies = () => {
   const BASE_URL = 'https://api.themoviedb.org/3';
 
   const [searchParams, setSearchParams] = useSearchParams();
-
   const currentQuery = searchParams.get('query') ?? '';
 
   const [movies, setMovies] = useState([]);
   const [inputQuery, setInputQuery] = useState(currentQuery);
 
+  // Перший useEffect: коли змінюється параметр URL, змінюємо inputQuery
+  useEffect(() => {
+    if (currentQuery) {
+      setInputQuery(currentQuery);
+    }
+  }, [currentQuery]);
+
+  // Другий useEffect: коли змінюється inputQuery, виконуємо запит
   useEffect(() => {
     if (inputQuery) {
       axios
@@ -30,25 +37,30 @@ const Movies = () => {
   const updateQueryString = evt => {
     setInputQuery(evt.target.value);
   };
-  const handleSearch = () => {
-    const nextParams = inputQuery !== '' ? { query: inputQuery } : {};
+
+  const handleSearch = evt => {
+    evt.preventDefault();
+    const nextParams = new URLSearchParams(
+      inputQuery !== '' ? { query: inputQuery } : {}
+    );
     setSearchParams(nextParams);
   };
+
   const handleMovieClick = () => {
     sessionStorage.setItem('lastQuery', inputQuery);
   };
 
   return (
     <div className={styles.container}>
-      <div className={styles.searchBar}>
+      <form className={styles.searchBar} onSubmit={handleSearch}>
         <input
           type="text"
           value={inputQuery}
           onChange={updateQueryString}
           placeholder="Search for a movie..."
         />
-        <button onClick={handleSearch}>Search</button>
-      </div>
+        <button type="submit">Search</button>
+      </form>
       <ul className={styles.moviesList}>
         {movies.map(movie => (
           <li key={movie.id} className={styles.movieItem}>
